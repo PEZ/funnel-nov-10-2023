@@ -1,0 +1,22 @@
+{:slides ["slides/hello.md",
+
+          "slides/interactive-programming/ip-intro.md",
+          "slides/interactive-programming/yay.md"
+          "slides/interactive-programming/vic-20.md"
+          "slides/interactive-programming/brooks.md",
+          "slides/interactive-programming/plotter.md",
+          "slides/interactive-programming/postscript.md",
+          "slides/interactive-programming/plain.md",
+          "slides/interactive-programming/clojure.md",
+          "slides/interactive-programming/thanks.md"
+
+          "slides/clojure-look.md"
+          "slides/clojure-what.md"
+          "slides/clojure-special.md"
+          "slides/clojure-frictions.md"
+          "slides/stability.md"
+          "slides/repl.md"
+
+          "slides/calva.md"
+          ]
+ }
