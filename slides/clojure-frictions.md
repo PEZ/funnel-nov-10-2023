@@ -14,8 +14,9 @@
 
 </div>
 
-<div class="column">
+<div class="column center middle">
 
+<div class="extra-large">¯\_(ツ)_/¯</div>
 
 </div>
 </div>

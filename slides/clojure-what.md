@@ -5,10 +5,10 @@
 Created by Rich Hickey. First release 2007.
 
 <div class="gutters-10 row">
-<div class="column">
+<div class="column" style="flex: 1.4;">
 
-Pragmatic. Not statically typed.
-Stable. Functional. A LISP. Hosted.
+Pragmatic. Stable. Not statically typed.
+A LISP. Hosted. Functional first.
 
 - Clojure, JVM, compiles to bytecode (not Java)
 - ClojureScript, compiles to JavaScript

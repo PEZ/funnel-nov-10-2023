@@ -5,30 +5,32 @@
 <div class="column">
 
 - Functional first
+- Immutability first
 - Strong developer ergonomics
-  - **Interactive Programming** 
-    (a.k.a REPL Driven Development)
-  - Little boilerplate, small code bases
-  - Friendly and helpsome community
+  - Interactive Programming
+  - _Very_ stable
   - Rich core library
-  - **Very stable**
+  - Rich ecosystem
   - `nil` safe
-- Simplicity
-- First class macros
+    ``` typescript
+    `Hello ${x ?? ""}`;
+    ```
+    ``` clojure
+    (str "Hello " x)
+    ```
+  - Friendly and helpsome community
 
 </div>
 
 <div class="column">
 
-- Immutability first
 - Strong Concurrency story
-- Data oriented
+- Designed for interop
+- Strong abstractions
 - Lovely literal data syntax
-- Strong abstractions, e.g. sequence
+- Data oriented
+- First class macros
 - Small libraries over huge frameworks
-- Focused on business problems
-  - Minimize accidental complexity
-  - Easy to create DSLs (but often you don't need to)
 - Ecosystem funded by NuBank + many companies + the community
 </div>
 </div>
