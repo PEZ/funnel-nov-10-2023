@@ -31,7 +31,6 @@
 - Data oriented
 - First class macros
 - Small libraries over huge frameworks
-- Ecosystem funded by NuBank + many companies + the community
 </div>
 </div>
 

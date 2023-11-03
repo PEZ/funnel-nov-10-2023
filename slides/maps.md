@@ -1,13 +1,15 @@
 <div class="slide">
 
-# Death By Specificity
+# “Just use maps”
 Rich Hickey
 
 <div class="gutters-10 row">
 <div class="column">
 
-### “Just use maps”
+Death By Specificity
 * https://www.youtube.com/watch?v=aSEQfqNYNAc
+
+![Just use maps](images/use-maps-qr-code.jpg)
 
 </div>
 <div class="column center" style="flex: 1.4;">
