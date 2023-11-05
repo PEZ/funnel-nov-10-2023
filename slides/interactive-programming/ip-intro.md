@@ -21,9 +21,10 @@
 <div style="flex: 5;">
 
 * https://github.com/PEZ
-* https://twitter.com/pappapez
+* https://x.com/pappapez
 * https://www.linkedin.com/in/cospaia/
 * https://blog.agical.se/en/authors/peter-stromberg
+* https://calva.io/
 
 </div>
 
@@ -32,20 +33,29 @@
 
 <div style="display: flex; flex-direction: column; justify-content: space-between; margin-top: 0px">
   
-  <div style="display: flex; flex: 2; flex-direction: column; justify-content: space-between; margin-top: 0; margin-bottom: 50px;">
-    <div style="display: flex; flex-direction: row; justify-content: flex-start; align-items: center;">
-      <img src="agical.svg" height="160">
-      <div style="padding-top: 20px">
+<div style="display: flex; flex: 2; flex-direction: column; justify-content: space-between; margin-top: 0; margin-bottom: 10px;">
+<div style="display: flex; flex-direction: row; justify-content: flex-start;">
+<img src="agical.svg" height="160">
+<div style="padding-top: 20px">
 
-* **80%** Clojure contractor
-* **20%** Open Source developer
 * **100%** Salary
-      </div>
-    </div>
-  </div>
+  * **80%** Clojure contractor (well, ClojureScript mostly)
+  * **20%** Open Source developer
+
+<div class="row" style="justify-content: space-around;">
+<img alt="Clojure logo" src="clj.png" height=150> <img alt="ClojureScript logo" src="cljs.png" height=150> <img alt="Calva symbol" src="calva-symbol.png" height=150>
+</div>
+</div>
+</div>
+</div>
 
 </div>
 </div>
+</div>
+
+<div style="display: flex; flex-direction: row;">
+
+
 </div>
 
 </div>
