@@ -17,8 +17,10 @@
           "slides/maps.md"
           "slides/clojure-frictions.md"
           "slides/stability.md"
-          "slides/repl.md"
+          "slides/rich-hickey-talks.md"
 
+          "slides/repl.md"
           "slides/calva.md"
+          "slides/demo-fullstack-cljs.md"
           ]
  }

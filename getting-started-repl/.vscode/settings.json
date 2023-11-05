@@ -21,4 +21,5 @@
     "screencastMode.keyboardShortcutsFormat": "commandWithGroup",
     "markdown.preview.doubleClickToSwitchToEditor": false,
     "calva.showCalvaSaysOnStart": false,
+    "screencastMode.verticalOffset": 5,
 }
