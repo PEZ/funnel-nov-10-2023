@@ -21,4 +21,26 @@
 </div>
 </div>
 
+<div class="gutters-10 row">
+
+<div class="column">
+
+</div>
+<div class="column">
+<div class="gutters-10 row">
+<div class="column">
+
+Recommended podcast:
+https://clojuredesign.club/
+</div>
+<div class="column">
+
+![QR code: clojuredesign-podcast.club](images/clojuredesign-podcast-qr.jpg)
+</div>
+
+</div>
+</div>
+
+</div>
+
 </div>

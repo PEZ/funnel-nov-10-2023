@@ -4,7 +4,8 @@
 <div class="gutters-10 row">
 <div class="column">
 
-- Leads by example and with direction
+- Leads by example, vision, 
+  and direction
 - Guided by principles
 - A true original thinker
 - Fantastic public speaker
