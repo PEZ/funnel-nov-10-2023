@@ -42,20 +42,16 @@
   * **80%** Clojure contractor (well, ClojureScript mostly)
   * **20%** Open Source developer
 
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
 <div class="row" style="justify-content: space-around;">
 <img alt="Clojure logo" src="clj.png" height=150> <img alt="ClojureScript logo" src="cljs.png" height=150> <img alt="Calva symbol" src="calva-symbol.png" height=150>
-</div>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-</div>
-
-<div style="display: flex; flex-direction: row;">
-
-
 </div>
 
 </div>
