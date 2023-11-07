@@ -1,0 +1,3 @@
+# namespaces, vars, symbols
+
+\newpage
