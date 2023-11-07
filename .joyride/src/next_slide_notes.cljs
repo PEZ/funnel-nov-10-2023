@@ -23,6 +23,9 @@
 ;; (make it empty if you don't need any pandoc/TeX prelude)
 (def notes-header-path "slides/_notes-header.md")
 
+;; Use a font that prints something instead of nothing for missing characters
+(def main-font "DejaVu Sans")
+
 (defn log [& s]
   (.appendLine (joyride/output-channel) (string/join " " s)))
 
@@ -88,8 +91,26 @@
       (p/catch (fn [e]
                  (vscode/window.showErrorMessage (str "Error creating missing notes: " e))))))
 
+(defn print! []
+  (p/let [slides (next/slides-list+)
+          notes (notes-list+ slides)
+          command-line (into ["pandoc" notes-header-path]
+                             (concat notes ["-o" "output.pdf"
+                                            "--pdf-engine=xelatex"
+                                            "-V geometry:'landscape,a4paper,margin=2cm'"
+                                            "-V" (str "mainfont='" main-font "'")]))
+          command-line-string (string/join " " command-line)]
+    (log (str "Notes printing command line:\n" command-line-string))
+    (-> (vscode/window.showInformationMessage (str "Notes printing command line: " command-line-string) "Copy to clipboard")
+        (p/then (fn [button]
+                  (when (= "Copy to clipboard" button)
+                    (vscode/env.clipboard.writeText command-line-string))))
+        (p/then (fn []
+                  (vscode/window.showInformationMessage (str "Notes printing command line copied to clipboard!") "OK"))))))
+
 (comment
   (prepare!)
+  (print!)
   :rcf)
 
 
