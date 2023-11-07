@@ -1,16 +1,16 @@
 ;; == Keyboard shortcuts ==
 ;; Weird indent because of how comment block/selection works
     ;;{
-    ;;    "key": "ctrl+alt+j n",
+    ;;    "key": "ctrl+alt+j s",
     ;;    "command": "joyride.runCode",
     ;;    "args": "(next-slide/activate!)"
     ;;},
     ;;{
-    ;;    "key": "ctrl+alt+j ctrl+alt+n",
+    ;;    "key": "ctrl+alt+j ctrl+alt+s",
     ;;    "command": "joyride.runCode",
     ;;    "args": "(next-slide/deactivate!)"
     ;;},
-    ;;{ // Convenience when working with the slides
+    ;;{
     ;;    "key": "ctrl+alt+j ctrl+alt+m",
     ;;    "command": "markdown.showPreview",
     ;;},

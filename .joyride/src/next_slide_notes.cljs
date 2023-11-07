@@ -1,14 +1,19 @@
 ;; == Keyboard shortcuts ==
 ;; Weird indent because of how comment block/selection works
     ;;{
-    ;;    "key": "ctrl+alt+j ctrl+p",
+    ;;    "key": "ctrl+alt+j ctrl+n",
     ;;    "command": "joyride.runCode",
     ;;    "args": "(next-slide-notes/prepare!)"
     ;;},
     ;;{
-    ;;    "key": "ctrl+alt+j p",
+    ;;    "key": "ctrl+alt+j alt+n",
     ;;    "command": "joyride.runCode",
-    ;;    "args": "(next-slide/print!)"
+    ;;    "args": "(next-slide-notes/print!)"
+    ;;},
+    ;;{
+    ;;    "key": "ctrl+alt+j ctrl+alt+n",
+    ;;    "command": "joyride.runCode",
+    ;;    "args": "(next-slide-notes/toggle!)"
     ;;},
 
 (ns next-slide-notes
@@ -108,7 +113,26 @@
       (p/do (vscode/env.clipboard.writeText command-line-string)
             (vscode/window.showInformationMessage (str "Notes printing command line copied to clipboard!") "OK")))))
 
+(defn toggle-path! [path]
+  (-> (when (.endsWith path ".md")
+        (p/let [uri (-> (if (.endsWith path "-notes.md")
+                          (string/replace-first path #"-notes\.md$" ".md")
+                          (string/replace-first path #"\.md$" "-notes.md"))
+                        vscode/Uri.file)
+                document (vscode/workspace.openTextDocument uri)]
+          (vscode.window.showTextDocument document
+                                          #js {:preserveFocus false})))
+      (p/catch (fn [e]
+                 (log "ERROR:" e)))))
+
+(defn toggle! []
+  (-> (let [path vscode/window.activeTextEditor.document.uri.fsPath]
+        (toggle-path! path))
+      (p/catch (fn [_e]))))
+
 (comment
   (prepare!)
   (print!)
+  (toggle-path! "/Users/pez/Projects/workshops/funnel-nov-10-2023/slides/hello.md")
+  (toggle-path! "/Users/pez/Projects/workshops/funnel-nov-10-2023/slides/hello-notes.md")
   :rcf)
