@@ -10,7 +10,9 @@ fontsize: 20pt
 * counter demo template
   * freshly started, including server
   * counter tested
-
+* get started repl project
+  * repl disconnected
+  * output window cleaned and closed
 ---
 
 \newpage

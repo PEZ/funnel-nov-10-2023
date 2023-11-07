@@ -28,5 +28,6 @@
 
           "slides/calva-setup.md"
           "slides/minimal-clojure-project.md"
+          "slides/minimal-clojurescript.md"
           ]
  }
