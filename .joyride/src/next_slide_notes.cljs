@@ -19,6 +19,13 @@
             [clojure.string :as string]
             [next-slide :as next]))
 
+;; create this file with whatever YAML frontmatter you want
+;; (make it empty if you don't need any pandoc/TeX prelude)
+(def notes-header-path "slides/_notes-header.md")
+
+(defn log [& s]
+  (.appendLine (joyride/output-channel) (string/join " " s)))
+
 (defn- slide-header+ [slide-path]
   (p/let [slide-uri (vscode/Uri.joinPath (next/ws-root) slide-path)
           slide-text (p/-> slide-uri
@@ -53,26 +60,36 @@
     missing-notes))
 
 (defn create-file!+ [relative-path content]
-  (-> (p/let [file-uri (vscode/Uri.joinPath (next/ws-root) relative-path)
-              encoder (js/TextEncoder.)
-              content-data (.encode encoder content)]
+  (p/let [file-uri (vscode/Uri.joinPath (next/ws-root) relative-path)
+          encoder (js/TextEncoder.)
+          content-data (.encode encoder content)]
 
-        (vscode.workspace.fs.writeFile file-uri content-data))
+    (vscode.workspace.fs.writeFile file-uri content-data)))
+
+(defn create-missing-notes!+ [notes->headers missing-notes]
+  (p/do (p/doseq [note missing-notes]
+          (let [header (notes->headers note)
+                content (str header "\n\n\\newpage")]
+            (log "  Creating " note "-" header)
+            (create-file!+ note content)))
+        (log "")))
+
+(defn prepare! []
+  (-> (p/let [slides (next/slides-list+)
+              notes (notes-list+ slides)
+              headers (headers-list+ slides)
+              nhs (notes-and-headers+ headers notes)
+              notes->headers (into {} nhs)
+              missing (missing-notes-paths+ nhs)]
+        (log "Creating" (count missing) "missing -notes.md files")
+        (create-missing-notes!+ notes->headers missing)
+        (log "Done creating missing notes")
+        (vscode/window.showInformationMessage (str "Done creating " (count missing) " missing notes")))
       (p/catch (fn [e]
-                 (vscode/window.showErrorMessage e)))))
+                 (vscode/window.showErrorMessage (str "Error creating missing notes: " e))))))
 
 (comment
-  (p/do (create-file!+ "foo-file.md" "# hello\n\n \\newpage"))
-  (p/let [slides (next/slides-list+)
-          notes (notes-list+ slides)
-          headers (headers-list+ slides)
-          nhs (notes-and-headers+ headers notes)
-          _ (def nhs nhs)
-          notes->headers (into {} nhs)
-          missing (missing-notes-paths+ nhs)
-          _ (def missing missing)])
-
-
+  (prepare!)
   :rcf)
 
 
