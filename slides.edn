@@ -12,9 +12,10 @@
 
           "slides/clojure-look.md"
           "slides/perlism.md"
+          "slides/maps.md"
+          "slides/clojure-data.md"
           "slides/clojure-what.md"
           "slides/clojure-special.md"
-          "slides/maps.md"
           "slides/clojure-frictions.md"
           "slides/stability.md"
           "slides/rich-hickey-talks.md"
