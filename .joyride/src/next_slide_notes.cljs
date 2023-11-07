@@ -128,8 +128,18 @@
       (p/catch (fn [e]
                  (log "ERROR:" e)))))
 
+(defn current-markdown-path!+ []
+  (if-let [editor vscode/window.activeTextEditor]
+    (-> editor .-document .-uri .-fsPath)
+    (p/let [_ (vscode/commands.executeCommand "markdown.showPreview")
+            editor vscode/window.activeTextEditor
+            _ (def editor editor)
+            path (-> editor .-document .-uri .-fsPath)
+            _ (vscode/commands.executeCommand "markdown.showPreview")]
+      path)))
+
 (defn toggle! []
-  (-> (let [path vscode/window.activeTextEditor.document.uri.fsPath]
+  (-> (when-let [path (some-> vscode/window.activeTextEditor .-document .-uri .-fsPath)]
         (toggle-path! path))
       (p/catch (fn [_e]))))
 
