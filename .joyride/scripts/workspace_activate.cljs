@@ -3,6 +3,7 @@
             ["vscode" :as vscode]
             [promesa.core :as p]
             [next-slide]
+            [next-slide-notes]
             [showtime]
             [file-server]))
 

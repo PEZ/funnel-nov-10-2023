@@ -41,26 +41,30 @@
   (:require ["vscode" :as vscode]
             [joyride.core :as joyride]
             [promesa.core :as p]
-            [clojure.edn :as edn]))
+            [clojure.edn :as edn]
+            [clojure.string :as string]))
 
 (def ^:private !state (atom {:active? false
                              :active-slide 0}))
 
-(defn- ws-root []
+(defn ws-root []
   (if (not= js/undefined
             vscode/workspace.workspaceFolders)
     (.-uri (first vscode.workspace.workspaceFolders))
     (vscode/Uri.parse ".")))
 
+(defn slides-list+ []
+  (p/let [config-uri (vscode/Uri.joinPath (ws-root) "slides.edn")
+          config-data (vscode/workspace.fs.readFile config-uri)
+          config-text (-> (js/Buffer.from config-data) (.toString "utf-8"))
+          config (edn/read-string config-text)]
+    (:slides config)))
+
 (defn next!
   ([]
    (next! true))
   ([forward?]
-   (p/let [config-uri (vscode/Uri.joinPath (ws-root) "slides.edn")
-           config-data (vscode/workspace.fs.readFile config-uri)
-           config-text (-> (js/Buffer.from config-data) (.toString "utf-8"))
-           config (edn/read-string config-text)
-           slides (:slides config)
+   (p/let [slides (slides-list+)
            next (if forward?
                   #(min (inc %) (dec (count slides)))
                   #(max (dec %) 0))]
