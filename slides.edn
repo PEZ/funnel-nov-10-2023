@@ -25,5 +25,7 @@
           "slides/demo-fullstack-cljs.md"
           "slides/demo-joyride-js-repl.md"
           "slides/feedback.md"
+
+          "slides/calva-setup.md"
           ]
  }
