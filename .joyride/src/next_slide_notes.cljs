@@ -99,18 +99,16 @@
                                             "--pdf-engine=xelatex"
                                             "-V geometry:'landscape,a4paper,margin=2cm'"
                                             "-V" (str "mainfont='" main-font "'")]))
-          command-line-string (string/join " " command-line)]
+          command-line-string (string/join " " command-line)
+          _ (println command-line-string)
+          button (vscode/window.showInformationMessage
+                  (str "Notes printing command line") "Copy to clipboard")]
     (log (str "Notes printing command line:\n" command-line-string))
-    (-> (vscode/window.showInformationMessage (str "Notes printing command line: " command-line-string) "Copy to clipboard")
-        (p/then (fn [button]
-                  (when (= "Copy to clipboard" button)
-                    (vscode/env.clipboard.writeText command-line-string))))
-        (p/then (fn []
-                  (vscode/window.showInformationMessage (str "Notes printing command line copied to clipboard!") "OK"))))))
+    (when (= "Copy to clipboard" button)
+      (p/do (vscode/env.clipboard.writeText command-line-string)
+            (vscode/window.showInformationMessage (str "Notes printing command line copied to clipboard!") "OK")))))
 
 (comment
   (prepare!)
   (print!)
   :rcf)
-
-
