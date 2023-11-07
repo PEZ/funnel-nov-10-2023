@@ -31,6 +31,9 @@
 ;; Use a font that prints something instead of nothing for missing characters
 (def main-font "DejaVu Sans")
 
+;; Path to speaker notes output file
+(def notes-pdf "speaker-notes.pdf")
+
 (defn log [& s]
   (.appendLine (joyride/output-channel) (string/join " " s)))
 
@@ -100,7 +103,7 @@
   (p/let [slides (next/slides-list+)
           notes (notes-list+ slides)
           command-line (into ["pandoc" notes-header-path]
-                             (concat notes ["-o" "output.pdf"
+                             (concat notes ["-o" notes-pdf
                                             "--pdf-engine=xelatex"
                                             "-V geometry:'landscape,a4paper,margin=2cm'"
                                             "-V" (str "mainfont='" main-font "'")]))
