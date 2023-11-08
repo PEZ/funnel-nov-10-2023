@@ -6,10 +6,11 @@
 
 ### Prerequisites:
 - Java
-- Clojure CLI (`clojure` and `clj`, `deps.edn`)
-    - `brew install clojure/tools/clojure` – [clojure.org/guides/install_clojure](https://clojure.org/guides/install_clojure)
 - VS Code
 
+</div>
+<div class="column" style="flex: 1.3">
+<img alt="Calva symbol" src="images/calva-symbol.png" width=200>
 </div>
 </div>
 
@@ -17,9 +18,10 @@
 <div class="column">
 
 ### Install:
-- **Extensions** pane -> Search for “Calva”
+- VS Code **Extensions** pane:
+  Search “Calva”
 </div>
-<div class="column" style="flex: 1.2">
+<div class="column" style="flex: 1.3">
 
 ### Start a standalone REPL:
 - Open a new VS Code window
@@ -27,5 +29,9 @@
 - REPL button -> **Start a standalone REPL**
 </div>
 </div>
+
+---
+**Clojure CLI** (`clojure` and `clj`) needed for `deps.edn` projects - [clojure.org/guides/install_clojure](https://clojure.org/guides/install_clojure)
+`brew install clojure/tools/clojure`
 
 </div>
