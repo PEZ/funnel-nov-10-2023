@@ -8,25 +8,22 @@
 - Java
 - VS Code
 
-</div>
-<div class="column" style="flex: 1.3">
+### Install in VS Code:
+- **Extensions** pane: Search “Calva”
+
+<div class="row center">
+
 <img alt="Calva symbol" src="images/calva-symbol.png" width=200>
 </div>
 </div>
-
-<div class="gutters-10 row">
-<div class="column">
-
-### Install:
-- VS Code **Extensions** pane:
-  Search “Calva”
-</div>
-<div class="column" style="flex: 1.3">
+<div class="column" style="flex: 1.5">
 
 ### Start a standalone REPL:
 - Open a new VS Code window
-- Command Palette -> **Calva: Activate Extension**
-- REPL button -> **Start a standalone REPL**
+- Command Palette -> **Calva: Start a Standalone REPL**
+
+![Screenshot: VS Code Command Palette - Calva: Start a Standalone REPL](images/calva-start-standalone-repl.jpg)
+
 </div>
 </div>
 
