@@ -31,9 +31,11 @@ console.log(hello("World"));
 <div class="column">
 
 ``` clojure
-(-> "World!" hello println) ;=> nil
+(->> "World" hello println) ;=> nil
 
 (+ 1 2 3 36) ;=> 42
+
+(if (even? 42) "Y" "N") ;=> "Y"
 
 (vscode/window.showInformationMessage
  "Hello World!")
@@ -41,7 +43,6 @@ console.log(hello("World"));
 (vscode/window.showInformationMessage
  (->> ["🥚" "🐔"]
       sort
-      vec
       (str "Jury says: ")))
 ```
 

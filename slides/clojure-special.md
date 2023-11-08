@@ -6,7 +6,7 @@
 
 ### Small and simple
 - Functional first
-- Immutability first
+- Immutability by default
   - Value semantics
 - Strong Concurrency story
 - Designed for interop
