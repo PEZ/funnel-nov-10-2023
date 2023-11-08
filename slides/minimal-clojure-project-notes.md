@@ -10,5 +10,6 @@
 * Will bite you
 * The REPL doesn't care
 
+* We'll get back to this. Open a new window
 
 \newpage

@@ -35,6 +35,6 @@
 </div>
 </div>
 
-<kbd>F12</kbd> to see definitions. Try with `when`, and `comment`. What about `if`?.
+<kbd>F12</kbd> to go to definitions. Try with `when`, and `comment`. What about `if`?.
 
 </div>
