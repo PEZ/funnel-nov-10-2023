@@ -20,6 +20,7 @@ https://github.com/PEZ/cljs-re-frame-full-stack
 * Re-frame, state management
 * Timbre, logging
 * Kaocha, test (no tests included)
+* shadow-cljs, build
 </div>
 <div class="column middle center">
 <img alt="ClojureScript logo" src="images/cljs.png">
