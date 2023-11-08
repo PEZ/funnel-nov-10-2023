@@ -16,9 +16,10 @@
 
 ### Start a standalone REPL:
 1. Open a new VS Code window
-2. Command Palette -> **Calva: Start a Standalone REPL**
+2. Command Palette:
+   **Calva: Fire up the Getting Started REPL**
 
-![Screenshot: VS Code Command Palette - Calva: Start a Standalone REPL](images/calva-start-standalone-repl.jpg)
+![Screenshot: VS Code Command Palette - Calva: Fire up the Getting Started REPL](images/calva-get-started-repl-menu.jpg)
 
 </div>
 </div>
