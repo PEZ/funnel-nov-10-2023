@@ -1,13 +1,14 @@
 <div class="slide">
 
-# Immutable data
+# Collections
 <div class="gutters-10 row">
 <div class="column">
 
-* Value semantics
-* Persistent data structures
+* Immutable
+* Persistent Data Structures
   * Structural sharing
-* Concrete collections
+  * [Wikipedia: Persistent data structure](https://en.wikipedia.org/wiki/Persistent_data_structure)
+* Value semantics
 * Designed for thread first, `->`
   * E.g. `conj`, `assoc`, `update` 
 
