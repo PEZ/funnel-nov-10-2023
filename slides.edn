@@ -29,5 +29,6 @@
           "slides/calva-setup.md"
           "slides/minimal-clojure-project.md"
           "slides/minimal-clojurescript.md"
+          "slides/clojure-basics-data.md"
           "slides/clojure-basics-ns-vars.md"
           ]}

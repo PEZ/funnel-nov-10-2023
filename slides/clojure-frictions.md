@@ -9,8 +9,8 @@
 - Error messages
 - Framework aversion
 - Dense code
-- `nil` safe can bite you
 - Simple is not the same as easy
+- `nil` safe can bite you
 
 </div>
 

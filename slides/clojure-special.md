@@ -7,6 +7,7 @@
 ### Small and simple
 - Functional first
 - Immutability first
+  - Value semantics
 - Strong Concurrency story
 - Designed for interop
 - Strong abstractions
@@ -20,10 +21,12 @@
 <div class="column">
 
 ### Strong developer ergonomics
+- Friendly and helpsome community
 - Interactive Programming
 - _Very_ stable
 - Rich core library
 - Rich ecosystem
+- Minimal syntax
 - `nil` safe
   ``` typescript
   `Hello ${x ?? ""}`;
@@ -31,7 +34,6 @@
   ``` clojure
   (str "Hello " x)
   ```
-- Friendly and helpsome community
 
 </div>
 </div>
