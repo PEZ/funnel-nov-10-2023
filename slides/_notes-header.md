@@ -13,6 +13,8 @@ fontsize: 20pt
 * get started repl project
   * repl disconnected
   * output window cleaned and closed
+
+* Zoom in three times in a new window
 ---
 
 \newpage
