@@ -15,10 +15,15 @@
 
 <div class="column">
 
-![VS Code Screenshot Copy path](images/vscode-copy-path.jpg)
-
+![VS Code Screenshot Copy path](images/vscode-copy-path.png)
 </div>
 </div>
 
-![Screenshot VS Code terminal, standalone repl directory tree](images/calva-standalone-repl-tree.png)
+``` sh
+~/Projects 
+❯ mv /var/.../betterthantomorrow.calva/x6uli/ calva-getting-started-repl
+
+~/Projects 
+❯ code calva-getting-started-repl
+```
 </div>

@@ -10,6 +10,5 @@
 * Will bite you
 * The REPL doesn't care
 
-* A non-project, The REPL doesn't care
 
 \newpage
