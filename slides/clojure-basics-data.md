@@ -28,7 +28,7 @@
  :vectors [1 "2" :three 4]
  :maps {:foo #inst "2020-10-06T12:07:29.085-00:00" 
         :bar-baz [1 2 3]
-        {:foo :bar}}
+        :qux {:foo :bar}}
  :sets #{1 "2" :three}
  :symbols hello :quoted-symbol 'foo-bar/baz
  #uuid "f47ac10b-58cc-4372-a567-0e02b2c3d479" :foo}
