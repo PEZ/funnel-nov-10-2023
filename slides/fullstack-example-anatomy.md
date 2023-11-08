@@ -2,7 +2,6 @@
 
 # Anatomy of the full-stack app example
 <div class="gutters-10 row">
-
 <div class="column" style="flex: 1;">
 
 https://github.com/PEZ/cljs-re-frame-full-stack
@@ -15,23 +14,20 @@ https://github.com/PEZ/cljs-re-frame-full-stack
 <div class="column" style="flex: 2.5;">
 
 **Frontend**
-
 * Reagent, React wrapper
 * Re-frame, state management
 * Timbre, logging
 * Kaocha, test (no tests included)
-* shadow-cljs, build
+* shadow-cljs, compile, build, dev server
 </div>
 <div class="column middle center">
 <img alt="ClojureScript logo" src="images/cljs.png">
 </div>
 </div>
-
 <div class="row gutters-10">
 <div class="column" style="flex: 2.5;">
 
 **Backend**
-
 * Mount, application life cycle
 * Ring, http requests and responses
 * Reitit, routing
@@ -42,9 +38,6 @@ https://github.com/PEZ/cljs-re-frame-full-stack
 <img alt="Clojure logo" src="images/clj.png">
 </div>
 </div>
-
 </div>
-
 </div>
-
 </div>
