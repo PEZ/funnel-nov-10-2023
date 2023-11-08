@@ -34,4 +34,5 @@
           "slides/clojure-basics-forms.md"
           "slides/clojure-basics-functions.md"
           "slides/clojure-basics-immutable.md"
+          "slides/clojure-basics-sequences.md"
           ]}
