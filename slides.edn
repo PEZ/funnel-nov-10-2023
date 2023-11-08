@@ -33,4 +33,5 @@
           "slides/clojure-basics-ns-vars.md"
           "slides/clojure-basics-forms.md"
           "slides/clojure-basics-functions.md"
+          "slides/clojure-basics-immutable.md"
           ]}

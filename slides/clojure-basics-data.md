@@ -12,7 +12,7 @@
   * Maps
   * Vectors
   * Sets
-
+* Callable: keywords, vectors, maps, sets
 </div>
 
 <div class="column" style="flex: 2.9;">
