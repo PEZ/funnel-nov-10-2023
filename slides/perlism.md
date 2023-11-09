@@ -9,7 +9,7 @@ Alan J. Perlis
 ### “It is better to have 100 functions operate on one data structure than 10 functions on 10 data structures.” 
 More Perlisms:
 * https://www.cs.yale.edu/homes/perlis-alan/quotes.html
-
+  <img alt="QR Code: Perlis Quotes" src="images/perlisms-qr.jpg" height=220 width=220>
 </div>
 <div class="column center">
 <img src="images/Alan_Perlis.webp" width="300">
