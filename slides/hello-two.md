@@ -10,7 +10,7 @@ Peter Strömberg + Funnel people, 10 November 2023
 **Open for all, 9 - 10:30**
 
 * Who am I, and why do I love Clojure?
-* What makes Clojure special?
+* What is Clojure?
 * Demo: **Interactive Programming**
 
 <div style="text-align: center; margin-top:1rem;">
