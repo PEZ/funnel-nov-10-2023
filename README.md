@@ -2,7 +2,9 @@
 
 To run the presentation using next-slide.cljs you need the Joyride extension.
 
-For all the features in the presentation to work, you also need to run `npm i`.
+You also need to run `npm i`.
+
+Then reload the VS Code window: **Developer: Reload Window**
 
 ## next-slide.cljs
 
