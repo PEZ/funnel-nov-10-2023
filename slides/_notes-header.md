@@ -33,5 +33,6 @@ fontsize: 20pt
 * presentation project
   * Closed all editors except hello-one.md
   * Joyride REPL started and connected
+  * screecast mode *OFF*
 
 \newpage
