@@ -23,8 +23,8 @@
 * https://github.com/PEZ
 * https://x.com/pappapez
 * https://www.linkedin.com/in/cospaia/
+* https://www.youtube.com/CalvaTV
 * https://blog.agical.se/en/authors/peter-stromberg
-* https://calva.io/
 
 </div>
 

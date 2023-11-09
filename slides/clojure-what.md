@@ -8,7 +8,7 @@ Created by Rich Hickey. First release 2007.
 <div class="column" style="flex: 1.1;">
 
 Pragmatic. Stable. Not statically typed.
-LISP. Hosted. Functional first. Data oriented.
+LISP. Hosted. Functional first. Immutable by default.
 
 - Clojure, JVM, compiles to bytecode (not Java)
 - ClojureScript, compiles to JavaScript

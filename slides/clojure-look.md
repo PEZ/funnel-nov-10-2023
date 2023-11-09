@@ -20,9 +20,10 @@ No parens in Hello World! 😀
 (defn hello [s]
   (str "Hello " s "!"))
 
-(println (hello "World"))
+(println (hello "World")) ;=> nil
 ```
 
+Not Clojure:
 ``` ts
 console.log(hello("World"));
 ```

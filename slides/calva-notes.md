@@ -8,12 +8,7 @@
   * since we know how to use the repl …
   * I hope you try this yourself and give me feedback.
 
-* We’ll skip learning Clojure here and now.
-  * I was Interactive Programming.
-    * app running
-    * querying and modifying,
-    * not a very obvious.
-    * another app.
-    * Two apps.
+* Eval top level
+* Eval current form
 
 \newpage

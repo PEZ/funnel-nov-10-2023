@@ -32,6 +32,7 @@ Hands on, on your machines
 * Examining a template for a simple full stack app
 * **Get started with _customs-app_** (or _funnel-clj_, whichever we fancy)
 
+Lunch: 12-13
 </div>
 
 </div>

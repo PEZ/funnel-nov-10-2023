@@ -5,16 +5,18 @@ fontsize: 20pt
 
 # Checklist:
 
-* js_repl.cljs freshly run
-  * display JS-REPL output
+* get started repl project
+  * output window closed from column 2
+  * freshly reloaded vscode window
+  * screencast mode on
 * counter demo template
   * freshly started, including server
   * counter tested
-* get started repl project
-  * repl disconnected
-  * output window cleaned and closed
+  * screencast mode on
+* js_repl.cljs freshly run
+  * display JS-REPL output
+  * screencast mode on
 
-* Zoom in three times in a new window
 ---
 
 \newpage

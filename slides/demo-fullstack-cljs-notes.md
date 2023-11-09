@@ -16,4 +16,7 @@
 * The file is not saved.
 * Playing it safe. Gains much bigger with real programming.
 
+* My YouTube channel CalvaTV, FizzBuzz
+
+* Questions?
 \newpage

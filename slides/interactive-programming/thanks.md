@@ -31,7 +31,7 @@ E.g: What do you use for your slides?
 * https://twitter.com/pappapez
 * https://www.linkedin.com/in/cospaia/
 * https://blog.agical.se/en/peter-stromberg
-* https://calva.io/
+* https://www.youtube.com/CalvaTV
 </div>
 </div>
 
