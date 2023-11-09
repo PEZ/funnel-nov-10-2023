@@ -1,3 +1,3 @@
-# How is Clojure special?
+# More Getting Started Resources
 
 \newpage
