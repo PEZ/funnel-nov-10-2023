@@ -2,6 +2,20 @@
 documentclass: extarticle
 fontsize: 20pt
 ---
+# Packlist
+
+* Laptop, charger
+* Speech cards
+* Speaker notes
+* Old Books
+* Glasses, case
+
+# Checklist:
+
+* Freshly restarted computer
+* Only VS Code and Safari running
+
+\newpage
 
 # Checklist:
 
@@ -16,11 +30,8 @@ fontsize: 20pt
 * js_repl.cljs freshly run
   * display JS-REPL output
   * screencast mode on
-
----
-
-\newpage
-
----
+* presentation project
+  * Closed all editors except hello-one.md
+  * Joyride REPL started and connected
 
 \newpage
