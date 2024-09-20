@@ -6,6 +6,11 @@
     ;;    "args": "(next-slide-notes/prepare!)"
     ;;},
     ;;{
+    ;;    "key": "ctrl+alt+j shift+n",
+    ;;    "command": "joyride.runCode",
+    ;;    "args": "(next-slide-notes/edit-active-note!)"
+    ;;},
+    ;;{
     ;;    "key": "ctrl+alt+j alt+n",
     ;;    "command": "joyride.runCode",
     ;;    "args": "(next-slide-notes/print!)"
@@ -85,19 +90,52 @@
             (create-file!+ note content)))
         (log "")))
 
+(defn gather-missing-notes+ []
+  (p/let [slides (next/slides-list+)
+          notes (notes-list+ slides)
+          headers (headers-list+ slides)
+          nhs (notes-and-headers+ headers notes)
+          notes->headers (into {} nhs)
+          missing (missing-notes-paths+ nhs)]
+    {:slides slides
+     :notes notes
+     :headers headers
+     :notes->headers notes->headers
+     :missing missing}))
+
 (defn prepare! []
-  (-> (p/let [slides (next/slides-list+)
-              notes (notes-list+ slides)
-              headers (headers-list+ slides)
-              nhs (notes-and-headers+ headers notes)
-              notes->headers (into {} nhs)
-              missing (missing-notes-paths+ nhs)]
+  (-> (p/let [{:keys [notes->headers missing]} (gather-missing-notes+)]
         (log "Creating" (count missing) "missing -notes.md files")
         (create-missing-notes!+ notes->headers missing)
         (log "Done creating missing notes")
         (vscode/window.showInformationMessage (str "Done creating " (count missing) " missing notes")))
       (p/catch (fn [e]
                  (vscode/window.showErrorMessage (str "Error creating missing notes: " e))))))
+
+(defn edit-active-note! []
+  (p/let [{:keys [slides notes->headers missing]} 
+          (gather-missing-notes+)
+          active-document-uri (some-> vscode/window.activeTextEditor .-document .-uri)
+          active-document-path (when active-document-uri
+                                 (vscode/workspace.asRelativePath
+                                  active-document-uri))
+          active-slide (or ((set slides) active-document-path)
+                           (nth slides (:active-slide @next/!state)))
+          active-note (string/replace active-slide #"\.md$" "-notes.md")
+          missing-active-note (keep (fn [note]
+                                      (when (= note active-note)
+                                        note))
+                                    missing)
+          active-note-uri (vscode.Uri.joinPath (next/ws-root) active-note)]
+    (when (seq missing-active-note)
+      (log "Creating missing:" active-note)
+      (create-missing-notes!+ notes->headers missing-active-note))
+    (vscode.workspace.openTextDocument active-note-uri)
+    (vscode.window.showTextDocument active-note-uri)))
+
+(comment
+  (#{"a" "b"} "a")
+  :rcf)
 
 (defn print! []
   (p/let [slides (next/slides-list+)
@@ -136,6 +174,7 @@
 (comment
   (prepare!)
   (print!)
+  (edit-active-note!)
   (toggle-path! "/Users/pez/Projects/workshops/funnel-nov-10-2023/slides/hello.md")
   (toggle-path! "/Users/pez/Projects/workshops/funnel-nov-10-2023/slides/hello-notes.md")
   :rcf)
