@@ -7,12 +7,12 @@ It's a culture, spanning the whole ecosystem.
 
 <div class="gutters-10 row">
   <div class="column">
-    Clojure
-    <img src="images/hickey-clojure-retention.png">
+    Some programming langage
+    <img src="images/hickey-scala-retention.png">
   </div>
   <div class="column">
-    Scala
-    <img src="images/hickey-scala-retention.png">
+    Clojure
+    <img src="images/hickey-clojure-retention.png">
   </div>
 </div>
 
