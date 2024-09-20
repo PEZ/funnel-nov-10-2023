@@ -15,6 +15,10 @@ To run the presentation as a slide show you need to:
 
 The next-slide.cljs script will automatically activate, when you reload the VS Code window with Joyride installed.
 
+The slides are designed for my particular screen size, but you can hopefully tweak the settings in `style.css`, `.vscode/settings.json` (and in some of the slides) to fit your screen.
+
+The slides are also designed to run in Zen Mode. Run the VS Code command: **View: Toggle Zen Mode** to get the full screen experience. There are some settings for Zen Mode in `.vscode/settings.json` too. Like not going full screen.
+
 ## next-slide.cljs
 
 To navigate the slides using the arrow keys you need to configure keyboard shortcuts. 
