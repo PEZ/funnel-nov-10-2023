@@ -21,4 +21,8 @@
     "screencastMode.keyboardShortcutsFormat": "commandWithGroup",
     "markdown.preview.doubleClickToSwitchToEditor": false,
     "calva.showCalvaSaysOnStart": false,
+    "zenMode.silentNotifications": false,
+    "zenMode.showTabs": "none",
+    "zenMode.hideStatusBar": false,
+    "zenMode.fullScreen": false,
 }
