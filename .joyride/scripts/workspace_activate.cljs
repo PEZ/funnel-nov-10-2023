@@ -62,8 +62,9 @@
   (clear-disposables!)
   (push-disposable (showtime/init!))
   (next-slide/activate!)
-  (let [port 6789]
-    (file-server/start! port)
+  (let [port 6789
+        server (file-server/start! port)]
+    (push-disposable server)
     (push-disposable (init-vic-item! port)))
   (push-disposable (add-joy-run-item!)))
 
